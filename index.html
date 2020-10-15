@@ -13,16 +13,12 @@
       appId: "463261c0-cc6a-4554-a68e-901f1e52444a",
     });
   });
+  let myCustomUniqueUserId = "667";
+
+OneSignal.push(function() {
+  OneSignal.setExternalUserId(myCustomUniqueUserId);
+});
 </script>
-    <script>
-window.plugins.OneSignal
-    .startInit("463261c0-cc6a-4554-a68e-901f1e52444a") 
-    .getIds(function(userDetails) {
-        console.log(userDetails.userId); // Player ID
-        console.log(userDetails.pushToken);
-    })
-    .endInit();
-    </script>
   </head>
   
 <body>
